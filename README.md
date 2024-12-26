@@ -1,4 +1,4 @@
-> For Raspberry Pi (OpenGL ES 3.0), check out https://github.com/wuhanstudio/hello-shadertoy-vcpkg/tree/raspi4
+> For Raspberry Pi (OpenGL ES 3.0), check out https://github.com/wuhanstudio/hello-shadertoy-vcpkg/tree/raspi
 
 # Hello Shadertoy
 
