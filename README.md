@@ -43,5 +43,6 @@ $ cd hello-shadertoy-vcpkg
 $ cmake -B build --preset vcpkg
 $ cmake --build build
 $ ./build/hello-shadertoy
+$ ./build/hello-shadertoy shader/vert.glsl shader/fire_ball_frag.glsl
 ```
 
