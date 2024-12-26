@@ -99,14 +99,14 @@ int main(int argc, char **argv)
 		glfwPollEvents();
 	}
 
-	glfwTerminate();
-
 	// Clean up
 	glDeleteBuffers(1, &VBO);
 	glDeleteBuffers(1, &IBO);
 	glDeleteVertexArrays(1, &VAO);
 
 	shader.destroy();
+
+	glfwTerminate();
 
 	return 0;
 }
