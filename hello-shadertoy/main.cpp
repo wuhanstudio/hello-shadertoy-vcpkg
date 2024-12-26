@@ -1,4 +1,3 @@
-#include <time.h>
 #include <fmt/core.h>
 
 #include <glad/glad.h>
@@ -7,7 +6,7 @@
 #include "ShaderProgram.h"
 
 // Set to true to enable fullscreen
-bool FULLSCREEN = true;
+bool FULLSCREEN = false;
 
 GLFWwindow* gWindow = NULL;
 const char* APP_TITLE = "ShaderToy";
@@ -78,16 +77,14 @@ int main(int argc, char **argv)
 	if (FULLSCREEN)
 		iResolution = glm::vec3(gWindowWidthFull, gWindowHeightFull, 0);
 
-	clock_t start_time = clock();
-	clock_t curr_time;
+	clock_t start_time = glfwGetTime();
 	float playtime_in_second = 0;
 
 	while (glfwWindowShouldClose(gWindow) == 0) {
 
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		curr_time = clock();
-		playtime_in_second = (curr_time - start_time) * 1.0f / 1000.0f;
+		playtime_in_second = (glfwGetTime() - start_time);
 
 		shader.use();
 		shader.setUniform("iResolution", iResolution);
@@ -103,6 +100,12 @@ int main(int argc, char **argv)
 	}
 
 	glfwTerminate();
+
+	// Clean up
+	glDeleteBuffers(1, &VBO);
+	glDeleteBuffers(1, &IBO);
+	glDeleteVertexArrays(1, &VAO);
+
 	shader.destroy();
 
 	return 0;
