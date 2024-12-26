@@ -12,8 +12,8 @@ GLFWwindow* gWindow = NULL;
 const char* APP_TITLE = "ShaderToy";
 
 // Window dimensions
-const int gWindowWidth = 800;
-const int gWindowHeight = 600;
+const int gWindowWidth = 400;
+const int gWindowHeight = 300;
 
 // Fullscreen dimensions
 int gWindowWidthFull = 1920;
@@ -34,8 +34,8 @@ int main(int argc, char **argv)
 
 	ShaderProgram shader;
 	//shader.loadShaders("shader/main_vert.glsl", "shader/tutorial.glsl");
-	//shader.loadShaders("shader/main_vert.glsl", "shader/fire_ball_frag.glsl");
-	shader.loadShaders("shader/main_vert.glsl", "shader/unreal_intro_frag.glsl");
+	shader.loadShaders("shader/main_vert.glsl", "shader/fire_ball_frag.glsl");
+	//shader.loadShaders("shader/main_vert.glsl", "shader/unreal_intro_frag.glsl");
 
 	// Set up the rectangle
 	//1. Set up an array of vertices for a quad (2 triangls) with an index buffer data
@@ -144,8 +144,8 @@ bool initOpenGL()
 
 	// Set the OpenGL version
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
+	glfwWindowHint(GLFW_CLIENT_API, GLFW_OPENGL_ES_API);
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);	// forward compatible with newer versions of OpenGL as they become available but not backward compatible (it will not run on devices that do not support OpenGL 3.3
 
 	// Create a window
