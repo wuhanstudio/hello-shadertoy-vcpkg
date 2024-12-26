@@ -34,8 +34,8 @@ int main(int argc, char **argv)
 
 	ShaderProgram shader;
 	//shader.loadShaders("shader/main_vert.glsl", "shader/tutorial.glsl");
-	//shader.loadShaders("shader/main_vert.glsl", "shader/fire_ball_frag.glsl");
-	shader.loadShaders("shader/main_vert.glsl", "shader/unreal_intro_frag.glsl");
+	shader.loadShaders("shader/main_vert.glsl", "shader/fire_ball_frag.glsl");
+	//shader.loadShaders("shader/main_vert.glsl", "shader/unreal_intro_frag.glsl");
 
 	// Set up the rectangle
 	//1. Set up an array of vertices for a quad (2 triangls) with an index buffer data

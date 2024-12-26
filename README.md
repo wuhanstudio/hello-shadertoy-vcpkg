@@ -5,7 +5,7 @@
 - For Windows users, please open `hello-shadertoy.sln` using Visual Studio.
 - For Linux users, please install `vcpkg` and `cmake` (>=3.25) first.
 
-
+![](demo.png)
 
 ## Install vcpkg
 
