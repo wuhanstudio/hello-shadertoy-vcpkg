@@ -1,3 +1,5 @@
+> For Raspberry Pi (OpenGL ES 3.0), check out https://github.com/wuhanstudio/hello-shadertoy-vcpkg/tree/raspi4
+
 # Hello Shadertoy
 
 > A shadertoy framework that runs on Windows and Linux, including ARM Linux.
