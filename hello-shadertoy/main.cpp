@@ -30,12 +30,17 @@ bool initOpenGL();
 
 int main(int argc, char **argv)
 {
+	// Read vert shader and frag shader from arguments
+	if (argc < 3) {
+		fmt::print("Usage: {} <vertex_shader> <fragment_shader>\n", argv[0]);
+		fmt::print("Example: {} shader/vert.glsl shader/fire_ball_frag.glsl\n", argv[0]);
+		return 1;
+	}
+
 	initOpenGL();
 
 	ShaderProgram shader;
-	//shader.loadShaders("shader/main_vert.glsl", "shader/tutorial.glsl");
-	shader.loadShaders("shader/main_vert.glsl", "shader/fire_ball_frag.glsl");
-	//shader.loadShaders("shader/main_vert.glsl", "shader/unreal_intro_frag.glsl");
+	shader.loadShaders(argv[1], argv[2]);
 
 	// Set up the rectangle
 	//1. Set up an array of vertices for a quad (2 triangls) with an index buffer data

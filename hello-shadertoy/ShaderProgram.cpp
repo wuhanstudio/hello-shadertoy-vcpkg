@@ -34,6 +34,9 @@ bool ShaderProgram::loadShaders(const char* vsFilename, const char* fsFilename)
 	string vsString = fileToString(vsFilename);
 	string fsString = fileToString(fsFilename);
 
+	fmt::println("Vertex Shader: {}", vsFilename);
+	fmt::println("Fragment Shader: {}", fsFilename);
+
 	const GLchar* vsSourcePtr = vsString.c_str();
 	const GLchar* fsSourcePtr = fsString.c_str();
 
